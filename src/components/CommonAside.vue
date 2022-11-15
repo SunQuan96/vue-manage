@@ -129,5 +129,6 @@ export default {
 <style lang="less" scope>
 .el-menu {
   border-right: none;
+  height: 100%;
 }
 </style>
