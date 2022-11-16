@@ -14,7 +14,7 @@ const routes = [
     component: Main,
     redirect: "/vueHome", //重定向
     children: [
-      { path: "User", name: "User", component: User }, //用户管理
+      { path: "User", name: "user", component: User }, //用户管理
       { path: "vueHome", name: "vueHome", component: vueHome }, //首页
       { path: "mall", name: "mall", component: Mall }, //商品管理
       { path: "page1", name: "page1", component: PageOne },
