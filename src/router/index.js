@@ -14,11 +14,11 @@ const routes = [
     component: Main,
     redirect: "/vueHome", //重定向
     children: [
-      { path: "User", component: User }, //用户管理
-      { path: "vueHome", component: vueHome }, //首页
-      { path: "mall", component: Mall }, //商品管理
-      { path: "page1", component: PageOne },
-      { path: "page2", component: PageTwo },
+      { path: "User", name: "User", component: User }, //用户管理
+      { path: "vueHome", name: "vueHome", component: vueHome }, //首页
+      { path: "mall", name: "mall", component: Mall }, //商品管理
+      { path: "page1", name: "page1", component: PageOne },
+      { path: "page2", name: "page2", component: PageTwo },
     ],
   },
 ];
@@ -28,16 +28,3 @@ const router = new VueRouter({
 });
 
 export default router;
-// export default {
-//     computed: {
-//       username() {
-//         // 我们很快就会看到 `params` 是什么
-//         return this.$route.params.username
-//       }
-//     },
-//     methods: {
-//       goBack() {
-//         window.history.length > 1 ? this.$router.go(-1) : this.$router.push('/')
-//       }
-//     }
-//   }

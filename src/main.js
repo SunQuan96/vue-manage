@@ -8,16 +8,6 @@ import store from "./store";
 import "./api/mock";
 
 Vue.config.productionTip = false;
-// Vue.use(Button)
-// Vue.use(Container)
-// Vue.use(Main)
-// Vue.use(Header)
-// Vue.use(Aside)
-// Vue.use(Radio)
-// Vue.use(Menu)
-// Vue.use(Submenu)
-// Vue.use(MenuItem)
-// Vue.use(MenuItemGroup)
 Vue.use(ElementUI);
 
 new Vue({

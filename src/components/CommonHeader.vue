@@ -3,7 +3,10 @@
         <div class="l-concent">
             <el-button @click='handleMenu' icon="el-icon-menu" size="mini"></el-button>
             <!-- 面包屑 -->
-            <span class="text">首页</span>
+            <el-breadcrumb separator="/">
+                <el-breadcrumb-item v-for='item in tags' :key="item.path" :to="{ path: item.path }">{{ item.label }}
+                </el-breadcrumb-item>
+            </el-breadcrumb>
         </div>
         <div class="r-concent">
             <el-dropdown>
@@ -19,6 +22,7 @@
     </div>
 </template>
 <script>
+import { mapState } from 'vuex'
 export default {
     data() {
         return {}
@@ -27,6 +31,14 @@ export default {
         handleMenu() {
             this.$store.commit('collapseMenu')
         }
+    },
+    computed: {
+        ...mapState({
+            tags: state => state.tab.tabsList
+        })
+    },
+    mounted() {
+        console.log(this.tags, 'tags')
     }
 }
 
@@ -52,6 +64,21 @@ export default {
             height: 40px;
             border-radius: 50%;
         }
+    }
+
+    .l-concent {
+        display: flex;
+        align-items: center;
+
+        /deep/ .is-link {
+            color: rgb(178, 203, 232);
+        }
+
+        .el-breadcrumb {
+            font-size: 13px;
+            margin-left: 20px;
+        }
+
     }
 }
 </style>

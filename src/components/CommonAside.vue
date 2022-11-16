@@ -52,10 +52,10 @@ export default {
       menu: [
         {
           path: '/',
-          name: 'home',
+          name: 'vueHome',
           label: '首页',
           icon: 's-home',
-          url: 'Home/Home',
+          url: 'vueHome/vueHome',
         },
         {
           path: '/mall',
@@ -108,6 +108,7 @@ export default {
       if (this.$route.path !== item.path && !(this.$route.path === "/vueHome" && (item.path === "/"))) {
         this.$router.push(item.path)
       }
+      this.$store.commit('selectMenu', item)
     }
   },
   //过滤

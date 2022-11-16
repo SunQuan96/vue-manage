@@ -1,21 +1,4 @@
 <template>
-    <!-- <div>
-
-        <el-container>
-            <el-header>Header</el-header>
-            <el-container>
-                <el-aside width="200px">
-                    <common-aside />
-                </el-aside>
-                <el-container>
-                    <el-main>
-                        <router-view></router-view>
-                    </el-main>
-                    <el-footer>Footer</el-footer>
-                </el-container>
-            </el-container>
-        </el-container>
-    </div> -->
     <div>
         <el-container>
             <el-aside width="auto">
@@ -25,7 +8,10 @@
                 <el-header>
                     <common-header />
                 </el-header>
+                <common-tag />
                 <el-main>
+                    <!-- //路由出口 -->
+                    <!-- //路由器匹配的组件将渲染在这 -->
                     <router-view></router-view>
                 </el-main>
             </el-container>
@@ -35,6 +21,7 @@
 <script>
 import CommonAside from '../components/CommonAside.vue'
 import CommonHeader from '../components/CommonHeader.vue'
+import CommonTag from '../components/CommonTag.vue'
 
 export default {
     data() {
@@ -44,7 +31,8 @@ export default {
     },
     components: {
         CommonAside,
-        CommonHeader
+        CommonHeader,
+        CommonTag,
     },
 }
 </script>

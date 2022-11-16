@@ -83,7 +83,7 @@ export default {
                 },
                 {
                     name: '今日收藏订单',
-                    value: '1234',
+                    value: '234',
                     icon: "star-on",
                     color: "#ffb980"
 
@@ -104,14 +104,14 @@ export default {
                 },
                 {
                     name: '今日未收藏订单',
-                    value: '1234',
+                    value: '134',
                     icon: "star-on",
                     color: "#ffb980"
 
                 },
                 {
                     name: '今日未下单订单',
-                    value: '1234',
+                    value: '123',
                     icon: "s-goods",
                     color: "#5ab1ef"
 
