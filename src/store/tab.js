@@ -1,3 +1,4 @@
+import Cookie from "js-cookie";
 export default {
   state: {
     isCollapse: false, //用于控制菜单展开还是收起
@@ -10,6 +11,7 @@ export default {
         url: "Home/Home",
       },
     ], //面包屑的数据
+    menu: [],
   },
   mutations: {
     //修改菜单展开还是收起的方法
@@ -35,6 +37,39 @@ export default {
       // console.log(item, 'item')
       const index = state.tabsList.findIndex((val) => val.name === item.name);
       state.tabsList.splice(index, 1);
+    },
+    // 设置menu的数据
+    setMenu(state, val) {
+      state.menu = val;
+      Cookie.set("menu", JSON.stringify(val));
+    },
+    // 动态注册路由
+    addMenu(state, router) {
+      // 判断缓存中是否有数据
+      if (!Cookie.get("menu")) return;
+      const menu = JSON.parse(Cookie.get("menu"));
+      state.menu = menu;
+      // 组装动态路由的数据
+      const menuArray = [];
+      menu.forEach((item) => {
+        if (item.children) {
+          item.children = item.children.map((item) => {
+            console.log(item.url);
+            item.component = () => import(`../views/${item.url}`);
+            return item;
+          });
+          menuArray.push(...item.children);
+        } else {
+          console.log(item.url);
+          item.component = () => import(`../views/${item.url}`);
+          menuArray.push(item);
+        }
+      });
+      console.log(menuArray, "menuArray");
+      // 路由的动态添加
+      menuArray.forEach((item) => {
+        router.addRoute("Main", item);
+      });
     },
   },
 };
