@@ -130,5 +130,6 @@ export default {
 <style lang="less" scope>
 .el-menu {
   border-right: none;
+
 }
 </style>
