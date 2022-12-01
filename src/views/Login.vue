@@ -1,4 +1,4 @@
-<!-- <template>
+<template>
     <el-form ref="form" label-width="70px" :inline="true" class="login-container" :model="form" :rules="rules">
         <h3 class="login_title">系统登录</h3>
         <el-form-item label="用户名" prop="username">
@@ -85,4 +85,4 @@ export default {
         width: 198px;
     }
 }
-</style> -->
+</style>

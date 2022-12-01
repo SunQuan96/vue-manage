@@ -6,13 +6,14 @@ import Main from "../views/Main.vue";
 import Mall from "../views/Mall.vue";
 import PageOne from "../views/PageOne.vue";
 import PageTwo from "../views/PageTwo.vue";
+import Login from "../views/Login.vue";
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
     component: Main,
-    redirect: "/Home", //重定向
+    redirect: "/home", //重定向
     children: [
       { path: "user", name: "user", component: User }, //用户管理
       { path: "home", name: "home", component: Home }, //首页
@@ -20,6 +21,11 @@ const routes = [
       { path: "page1", name: "page1", component: PageOne },
       { path: "page2", name: "page2", component: PageTwo },
     ],
+  },
+  {
+    path: "/login",
+    name: "login",
+    component: Login,
   },
 ];
 
