@@ -1,6 +1,6 @@
 <template>
     <div class="tabs">
-        <el-tag v-for="(item, index) in tags" :key="item.path" :closable="item.name !== 'vueHome'"
+        <el-tag v-for="(item, index) in tags" :key="item.path" :closable="item.name !== 'home'"
             :effect="$route.name === item.name ? 'dark' : 'plain'" @click="changeMenu(item)"
             @close="handleClose(item, index)" size="small">
             {{ item.label }}

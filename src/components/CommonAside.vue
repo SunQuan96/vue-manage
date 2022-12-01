@@ -52,10 +52,10 @@ export default {
       menu: [
         {
           path: '/',
-          name: 'vueHome',
+          name: 'home',
           label: '首页',
           icon: 's-home',
-          url: 'vueHome/vueHome',
+          url: 'Home/Home',
         },
         {
           path: '/mall',
@@ -105,7 +105,7 @@ export default {
     clickMenu(item) {
       console.log(item)
       //当页面的路由语跳转页面路由不一致才允许跳转
-      if (this.$route.path !== item.path && !(this.$route.path === "/vueHome" && (item.path === "/"))) {
+      if (this.$route.path !== item.path && !(this.$route.path === "/home" && (item.path === "/"))) {
         this.$router.push(item.path)
       }
       this.$store.commit('selectMenu', item)
@@ -130,6 +130,5 @@ export default {
 <style lang="less" scope>
 .el-menu {
   border-right: none;
-  height: 100%;
 }
 </style>

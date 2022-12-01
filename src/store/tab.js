@@ -4,10 +4,10 @@ export default {
     tabsList: [
       {
         path: "/",
-        name: "vueHome",
+        name: "home",
         label: "首页",
         icon: "s-home",
-        url: "vueHome/vueHome",
+        url: "Home/Home",
       },
     ], //面包屑的数据
   },
@@ -20,7 +20,7 @@ export default {
     selectMenu(state, val) {
       console.log(val, "val");
       //判断添加数据是否为首页
-      if (val.name !== "vueHome") {
+      if (val.name !== "Home") {
         const index = state.tabsList.findIndex(
           (item) => item.name === val.name
         );

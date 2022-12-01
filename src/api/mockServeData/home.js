@@ -13,7 +13,6 @@ export default {
           魅族: Mock.Random.float(100, 8000, 0, 0),
           苹果: Mock.Random.float(100, 8000, 0, 0),
           vivo: Mock.Random.float(100, 8000, 0, 0),
-
           三星: Mock.Random.float(100, 8000, 0, 0),
         })
       );

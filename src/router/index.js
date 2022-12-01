@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import User from "../views/User.vue";
-import vueHome from "../views/vueHome.vue";
+import Home from "../views/Home.vue";
 import Main from "../views/Main.vue";
 import Mall from "../views/Mall.vue";
 import PageOne from "../views/PageOne.vue";
@@ -12,10 +12,10 @@ const routes = [
   {
     path: "/",
     component: Main,
-    redirect: "/vueHome", //重定向
+    redirect: "/Home", //重定向
     children: [
-      { path: "User", name: "user", component: User }, //用户管理
-      { path: "vueHome", name: "vueHome", component: vueHome }, //首页
+      { path: "user", name: "user", component: User }, //用户管理
+      { path: "home", name: "home", component: Home }, //首页
       { path: "mall", name: "mall", component: Mall }, //商品管理
       { path: "page1", name: "page1", component: PageOne },
       { path: "page2", name: "page2", component: PageTwo },
