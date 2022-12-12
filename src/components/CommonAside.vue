@@ -21,7 +21,7 @@
 
   </el-menu>
 </template>
-<style lang="less" scope>
+<style lang="less" scoped>
 .el-menu-vertical-demo:not(.el-menu--collapse) {
   width: 200px;
   min-height: 400px;
@@ -88,7 +88,7 @@ export default {
   }
 }
 </script>
-<style lang="less" scope>
+<style lang="less" scoped>
 .el-menu {
   border-right: none;
 
