@@ -5,6 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "upload":"npm run build; cd dist; git init; git add .; git commit -am \"init\"; git remote add origin git@github.com:SunQuan96/vue-manage.git; git push -f origin master;",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
