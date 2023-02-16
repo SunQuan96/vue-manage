@@ -2,7 +2,7 @@
   <el-menu default-active="1-4-1" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose"
     :collapse="isCollapse" background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
 
-    <h3>{{ isCollapse ? '后台' : '通用后台管理系统' }}</h3>
+    <h3>{{ isCollapse? '后台': '笨笨后台管理系统' }}</h3>
     <el-menu-item @click="clickMenu(item)" v-for="item in noChildren" :index="item.name" :key="item.name">
       <i :class="'el-icon-' + item.icon"></i>
       <span slot="title">{{ item.label }}</span>
@@ -28,7 +28,9 @@
 }
 
 .el-aside {
-  overflow: hidden
+  height: calc(100%);
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .el-menu {
@@ -91,6 +93,5 @@ export default {
 <style lang="less" scoped>
 .el-menu {
   border-right: none;
-
 }
 </style>
